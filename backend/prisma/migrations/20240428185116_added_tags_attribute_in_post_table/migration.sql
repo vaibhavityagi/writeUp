@@ -1,0 +1,5 @@
+-- CreateEnum
+CREATE TYPE "Tag" AS ENUM ('MOTIVATION', 'CODE', 'DSA', 'TECHNICAL');
+
+-- AlterTable
+ALTER TABLE "Post" ADD COLUMN     "tag" "Tag" NOT NULL DEFAULT 'TECHNICAL';

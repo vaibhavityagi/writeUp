@@ -1,0 +1,6 @@
+-- AlterTable
+ALTER TABLE "Post" ADD COLUMN     "publishingDate" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ADD COLUMN     "readingTime" INTEGER NOT NULL DEFAULT 1;
+
+-- AlterTable
+ALTER TABLE "User" ADD COLUMN     "bio" TEXT;
