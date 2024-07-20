@@ -70,4 +70,18 @@ user.post("/signin", async (c) => {
   return c.json({ token });
 });
 
+// TEST ROUTE
+// get all the users
+user.get("/all", async (c) => {
+  const prisma = new PrismaClient({
+    datasourceUrl: c.env.DATABASE_URL,
+  }).$extends(withAccelerate());
+
+  const allUsers = await prisma.user.findMany();
+  if (!allUsers) return c.json({ messg: "no user" });
+  return c.json({
+    allUsers,
+  });
+});
+
 export default user;

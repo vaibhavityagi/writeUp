@@ -1,11 +1,11 @@
-type InputBoxProps = {
+interface InputBoxProps {
   type: string;
   label: string;
   placeholder?: string;
   id: string;
   value: string;
   onChange: (evt: React.ChangeEvent<HTMLInputElement>) => void;
-};
+}
 
 export default function InputBox({
   type,
@@ -24,7 +24,7 @@ export default function InputBox({
       <input
         type={type}
         placeholder={placeholder}
-        name={label}
+        name={type}
         id={id}
         className="w-full px-2 py-1 border rounded border-slate-200"
         onChange={onChange}
