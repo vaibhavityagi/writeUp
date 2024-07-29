@@ -28,7 +28,7 @@ export const updatePostInput = z.object({
   title: z.string(),
   content: z.string(),
   readingTime: z.number(),
-  tag: z.enum(["MOTIVATION", "CODE", "DSA", "TECHNICAL"]),
+  tag: z.enum(["INSPIRATIONAL", "OTHER", "DSA", "TECHNICAL"]),
 });
 
 export type UpdatePostInput = z.infer<typeof updatePostInput>;
