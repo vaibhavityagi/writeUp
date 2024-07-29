@@ -19,7 +19,7 @@ export const createPostInput = z.object({
   title: z.string(),
   content: z.string(),
   readingTime: z.number(),
-  tag: z.enum(["MOTIVATION", "CODE", "DSA", "TECHNICAL"]),
+  tag: z.enum(["INSPIRATIONAL", "OTHER", "DSA", "TECHNICAL"]),
 });
 
 export type CreatePostInput = z.infer<typeof createPostInput>;
