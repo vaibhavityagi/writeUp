@@ -4,6 +4,7 @@ interface InputBoxProps {
   placeholder?: string;
   id: string;
   value: string;
+  name: string;
   onChange: (evt: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -12,6 +13,7 @@ export default function InputBox({
   label,
   placeholder = "",
   id,
+  name,
   onChange,
   value,
 }: InputBoxProps) {
@@ -24,7 +26,7 @@ export default function InputBox({
       <input
         type={type}
         placeholder={placeholder}
-        name={type}
+        name={name}
         id={id}
         className="w-full px-2 py-1 border rounded border-slate-200"
         onChange={onChange}

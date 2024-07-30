@@ -34,8 +34,7 @@ export default function Auth({
       `http://localhost:8787/api/v1/user/${type}`,
       authInputs
     );
-    const jwt = res.data;
-    localStorage.setItem("token", `Bearer${jwt}`);
+    localStorage.setItem("token", res.data.token);
     navigate("/blogs");
   }
 
@@ -60,8 +59,9 @@ export default function Auth({
         {type == "signup" && (
           <InputBox
             type="text"
-            label="Username"
-            id="username"
+            label="Name"
+            id="name"
+            name="name"
             onChange={handleChange}
             // @ts-ignore
             value={authInputs.name}
@@ -71,6 +71,7 @@ export default function Auth({
           type="email"
           label="Email"
           id="email"
+          name="email"
           onChange={handleChange}
           value={authInputs.email}
         />
@@ -78,10 +79,11 @@ export default function Auth({
           type="password"
           label="Password"
           id="password"
+          name="password"
           onChange={handleChange}
           value={authInputs.password}
         />
-        <Button label="Sign In" onClick={handleClick} />
+        <Button label={type} onClick={handleClick} />
       </div>
     </div>
   );

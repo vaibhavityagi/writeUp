@@ -6,7 +6,7 @@ interface BlogProps {
   readingTime: number;
 }
 
-export default function Blog({
+export default function BlogCard({
   title,
   content,
   publishingDate,
