@@ -6,6 +6,7 @@ import Blogs from "./pages/Blogs";
 import Blog from "./pages/Blog";
 import PublishBlog from "./components/PublishBlog";
 import Navbar from "./components/Navbar";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -17,10 +18,8 @@ function App() {
           <Route path="/signin" element={<Signin />} />
           <Route path="/publish" element={<PublishBlog />} />
           <Route path="/blog/:id" element={<Blog />} />
-          <Route path="/blogs" element={<Blogs />}>
-            {/* <Route path="edit" element={} /> */}
-            {/* </Route> */}
-          </Route>
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </BrowserRouter>
     </>

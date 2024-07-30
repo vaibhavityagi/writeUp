@@ -1,5 +1,3 @@
-import { useRecoilState } from "recoil";
-import { newBlogAtom } from "../store/atoms/newBlog";
 import { ChangeEvent, useState } from "react";
 import { CreatePostInput } from "@vaibhavicodes/common";
 import axios from "axios";

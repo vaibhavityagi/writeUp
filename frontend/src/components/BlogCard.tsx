@@ -2,24 +2,26 @@ interface BlogProps {
   title: string;
   content: string;
   publishingDate: string;
-  author: number;
   readingTime: number;
+  tag: string;
 }
 
 export default function BlogCard({
   title,
   content,
   publishingDate,
-  author,
   readingTime,
+  tag,
 }: BlogProps) {
   return (
     <>
-      <div>{title}</div>
-      <div>{content}</div>
-      <div>{publishingDate}</div>
-      <div>{author}</div>
-      <div>{readingTime}</div>
+      <div>
+        <div>{title}</div>
+        <div>{publishingDate}</div>
+        <div>{readingTime}</div>
+        <div>{tag}</div>
+        <div>{content}</div>
+      </div>
     </>
   );
 }
